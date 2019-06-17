@@ -13,14 +13,14 @@ class BrandFixtures extends Fixture
         $fender = new Brand();
         $fender->setName("Fender");
         $manager->persist($fender);
-        $this->addReference("fender", $fender);
+        $this->addReference("Fender", $fender);
 
         $vox = new Brand();
         $vox->setName("Vox");
         $manager->persist($vox);
-        $this->addReference("vox", $vox);
+        $this->addReference("Vox", $vox);
 
-        $manager = new Brand();
+        $marshall25 = new Brand();
         $marshall25->setName("Marshall");
         $manager->persist($marshall25);
         $this->addReference("Marshall", $marshall25);

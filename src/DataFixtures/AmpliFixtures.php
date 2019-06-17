@@ -13,23 +13,23 @@ class AmpliFixtures extends Fixture implements DependentFixtureInterface
     {
         $fenderRumble = new Ampli();
         $fenderRumble->setName("Rumble 500");
-        $fenderRumble->setBrand($this->getReference("fender"));
+        $fenderRumble->setBrand($this->getReference("Fender"));
         $manager->persist($fenderRumble);
 
         $fenderRumble = new Ampli();
         $fenderRumble->setName("AC 30vr");
         $fenderRumble->setBrand($this->getReference("Vox"));
-        $manager->persist($voxac30);
+        $manager->persist($fenderRumble);
 
         $fenderRumble = new Ampli();
         $fenderRumble->setName("Code 25");
         $fenderRumble->setBrand($this->getReference("Marshall"));
-        $manager->persist($marshall25);
+        $manager->persist($fenderRumble);
 
         $fenderRumble = new Ampli();
         $fenderRumble->setName("Katana 50");
         $fenderRumble->setBrand($this->getReference("Boss"));
-        $manager->persist($bosskatana);
+        $manager->persist($fenderRumble);
 
         $manager->flush();
     }
