@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Music index{% endblock %}
+
+{% block body %}
+    <h1>Music index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Treble</th>
+                <th>Bass</th>
+                <th>Middle</th>
+                <th>Gain</th>
+                <th>Reverb</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for music in musics %}
+            <tr>
+                <td>{{ music.id }}</td>
+                <td>{{ music.title }}</td>
+                <td>{{ music.treble }}</td>
+                <td>{{ music.bass }}</td>
+                <td>{{ music.middle }}</td>
+                <td>{{ music.gain }}</td>
+                <td>{{ music.reverb }}</td>
+                <td>
+                    <a href="{{ path('music_show', {'id': music.id}) }}">show</a>
+                    <a href="{{ path('music_edit', {'id': music.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('music_new') }}">Create new</a>
+{% endblock %}
