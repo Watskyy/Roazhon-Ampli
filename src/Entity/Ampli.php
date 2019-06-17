@@ -98,4 +98,9 @@ class Ampli
 
         return $this;
     }
+
+    public function getFullname()
+    {
+        return $this->getBrand()->getName() . " " . $this->getName();
+    }
 }
