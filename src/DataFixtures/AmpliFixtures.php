@@ -11,25 +11,25 @@ class AmpliFixtures extends Fixture implements DependentFixtureInterface
 {
     public function load(ObjectManager $manager)
     {
-        $fenderRumble = new Ampli();
-        $fenderRumble->setName("Rumble 500");
-        $fenderRumble->setBrand($this->getReference("Fender"));
-        $manager->persist($fenderRumble);
+        $fender = new Ampli();
+        $fender->setName("Rumble 500");
+        $fender->setBrand($this->getReference("Fender"));
+        $manager->persist($fender);
 
-        $fenderRumble = new Ampli();
-        $fenderRumble->setName("AC 30vr");
-        $fenderRumble->setBrand($this->getReference("Vox"));
-        $manager->persist($fenderRumble);
+        $vox = new Ampli();
+        $vox->setName("AC 30vr");
+        $vox->setBrand($this->getReference("Vox"));
+        $manager->persist($vox);
 
-        $fenderRumble = new Ampli();
-        $fenderRumble->setName("Code 25");
-        $fenderRumble->setBrand($this->getReference("Marshall"));
-        $manager->persist($fenderRumble);
+        $Marshall = new Ampli();
+        $Marshall->setName("Code 25");
+        $Marshall->setBrand($this->getReference("Marshall"));
+        $manager->persist($Marshall);
 
-        $fenderRumble = new Ampli();
-        $fenderRumble->setName("Katana 50");
-        $fenderRumble->setBrand($this->getReference("Boss"));
-        $manager->persist($fenderRumble);
+        $Boss = new Ampli();
+        $Boss->setName("Katana 50");
+        $Boss->setBrand($this->getReference("Boss"));
+        $manager->persist($Boss);
 
         $manager->flush();
     }
