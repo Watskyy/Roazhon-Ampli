@@ -13,9 +13,9 @@ class MusicType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('treble')
             ->add('bass')
             ->add('middle')
+            ->add('treble')
             ->add('gain')
             ->add('reverb')
             ->add('artist')
