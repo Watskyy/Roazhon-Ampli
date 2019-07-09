@@ -11,29 +11,29 @@ class AmpliFixtures extends Fixture implements DependentFixtureInterface
 {
     public function load(ObjectManager $manager)
     {
-        $fender = new Ampli();
-        $fender->setName("Rumble 500");
-        $fender->setBrand($this->getReference("Fender"));
-        $this->addReference("fender",$fender);
-        $manager->persist($fender);
+        $rumble500 = new Ampli();
+        $rumble500->setName("Rumble 500");
+        $rumble500->setBrand($this->getReference("Fender"));
+        $this->addReference("Rumble500",$rumble500);
+        $manager->persist($rumble500);
 
-        $vox = new Ampli();
-        $vox->setName("AC 30vr");
-        $vox->setBrand($this->getReference("Vox"));
-        $this->addReference("vox",$vox);
-        $manager->persist($vox);
+        $ac30vr = new Ampli();
+        $ac30vr->setName("AC 30vr");
+        $ac30vr->setBrand($this->getReference("Vox"));
+        $this->addReference("ac30vr",$ac30vr);
+        $manager->persist($ac30vr);
 
-        $marshall = new Ampli();
-        $marshall->setName("Code 25");
-        $marshall->setBrand($this->getReference("Marshall"));
-        $this->addReference("marshall",$marshall);
-        $manager->persist($marshall);
+        $code25 = new Ampli();
+        $code25->setName("Code 25");
+        $code25->setBrand($this->getReference("Marshall"));
+        $this->addReference("code25",$code25);
+        $manager->persist($code25);
 
-        $boss = new Ampli();
-        $boss->setName("Katana 50");
-        $boss->setBrand($this->getReference("Boss"));
-        $this->addReference("boss",$boss);
-        $manager->persist($boss);
+        $katana50 = new Ampli();
+        $katana50->setName("Katana 50");
+        $katana50->setBrand($this->getReference("Boss"));
+        $this->addReference("katana50",$katana50);
+        $manager->persist($katana50);
 
         $manager->flush();
     }

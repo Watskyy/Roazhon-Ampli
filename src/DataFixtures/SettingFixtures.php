@@ -14,40 +14,44 @@ class SettingFixtures extends Fixture implements DependentFixtureInterface
         $fender1 = new Setting();
         $fender1->setProperty("Cutting Lead");
         $fender1->setValue(7.5);
-        $fender1->setAmpli($this->getReference("Fender"));
+        $fender1->setAmpli($this->getReference("rumble500"));
         $fender1->setMusic($this->getReference("rapeme"));
         $manager->persist($fender1);
 
         $fender2 = new Setting();
         $fender2->setName("Modern Heavy");
         $fender2->setValue(8.5);
-        $fender2->setAmpli($this->getReference("Fender"));
+        $fender2->setAmpli($this->getReference("rumble500"));
         $fender2->setMusic($this->getReference("rapeme"));
         $manager->persist($fender2);
 
         $vox = new Setting();
         $vox->setName("Smooth Lead");
         $vox->setValue(2);
-        $vox->setAmpli($this->getReference("Vox"));
+        $vox->setAmpli($this->getReference("ac30vr"));
         $vox->setMusic($this->getReference("foxeylady"));
         $manager->persist(vox);
 
         $marshall1 = new Setting();
         $marshall1->setName("Super Clean");
-        $vox->setValue(2);
-        $vox->setAmpli($this->getReference("Vox"));
-        $vox->setMusic($this->getReference("foxeylady"));
+        $marshall1->setValue(9);
+        $marshall1->setAmpli($this->getReference("code25"));
+        $marshall1->setMusic($this->getReference("starwaytoheaven"));
         $manager->persist($marshall1);
 
-        $gain = new Setting();
-        $gain->setName("gain");
-        $gain->setBrand($this->getReference("gain"));
-        $manager->persist($gain);
+        $marshall2 = new Setting();
+        $marshall2->setName("Modern Heavy");
+        $marshall2->setValue(10.5);
+        $marshall2->setAmpli($this->getReference("code25"));
+        $marshall2->setMusic($this->getReference("starwaytoheaven"));
+        $manager->persist($marshall2);
 
-        $reverb = new Setting();
-        $reverb->setName("reverb");
-        $reverb->setBrand($this->getReference("reverb"));
-        $manager->persist($reverb);
+        $boss = new Setting();
+        $boss->setName("Smooth Lead");
+        $boss->setValue(2.5);
+        $boss->setAmpli($this->getReference("katana50"));
+        $boss->setMusic($this->getReference("peoplegetready"));
+        $boss->persist($boss);
 
 
 
@@ -63,7 +67,7 @@ class SettingFixtures extends Fixture implements DependentFixtureInterface
     public function getDependencies()
     {
         return [
-            BrandFixtures::class,
+            AmpliFixtures::class,
             MusicFixtures::class
         ];
     }
