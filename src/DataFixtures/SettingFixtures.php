@@ -2,7 +2,7 @@
 
 namespace App\DataFixtures;
 
-use App\Entity\Ampli;
+use App\Entity\Setting;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -12,7 +12,8 @@ class SettingFixtures extends Fixture implements DependentFixtureInterface
     public function load(ObjectManager $manager)
     {
         $bass = new Setting();
-        $bass->setName("bass");
+        $bass->setProperty("bass");
+        $bass->setValue(3.2);
         $bass->setBrand($this->getReference("bass"));
         $manager->persist($bass);
 
@@ -55,7 +56,8 @@ class SettingFixtures extends Fixture implements DependentFixtureInterface
     public function getDependencies()
     {
         return [
-            BrandFixtures::class
+            BrandFixtures::class,
+            MusicFixtures::class
         ];
     }
 }
