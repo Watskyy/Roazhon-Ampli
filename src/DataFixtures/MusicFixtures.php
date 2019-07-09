@@ -27,7 +27,7 @@ class MusicFixtures extends Fixture implements DependentFixtureInterface
         $rapeme = new Music();
         $rapeme ->setTitle("Rape Me");
         $rapeme ->setGain(2.1);
-        $rapeme ->setMiddle(3;4);
+        $rapeme ->setMiddle(3.4);
         $rapeme ->setReverb(2.4);
         $rapeme ->setBass(5.2);
         $rapeme ->setTreble(4.9);

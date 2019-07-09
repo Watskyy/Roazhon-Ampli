@@ -22,8 +22,8 @@ class BrandFixtures extends Fixture
 
         $marshall25 = new Brand();
         $marshall25->setName("Marshall");
-        $manager->persist($marshall25);
         $this->addReference("Marshall", $marshall25);
+        $manager->persist($marshall25);
 
         $bosskatana = new Brand();
         $bosskatana->setName("Boss");

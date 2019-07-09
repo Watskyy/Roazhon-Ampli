@@ -14,22 +14,26 @@ class AmpliFixtures extends Fixture implements DependentFixtureInterface
         $fender = new Ampli();
         $fender->setName("Rumble 500");
         $fender->setBrand($this->getReference("Fender"));
+        $this->addReference("fender",$fender);
         $manager->persist($fender);
 
         $vox = new Ampli();
         $vox->setName("AC 30vr");
         $vox->setBrand($this->getReference("Vox"));
+        $this->addReference("vox",$vox);
         $manager->persist($vox);
 
-        $Marshall = new Ampli();
-        $Marshall->setName("Code 25");
-        $Marshall->setBrand($this->getReference("Marshall"));
-        $manager->persist($Marshall);
+        $marshall = new Ampli();
+        $marshall->setName("Code 25");
+        $marshall->setBrand($this->getReference("Marshall"));
+        $this->addReference("marshall",$marshall);
+        $manager->persist($marshall);
 
-        $Boss = new Ampli();
-        $Boss->setName("Katana 50");
-        $Boss->setBrand($this->getReference("Boss"));
-        $manager->persist($Boss);
+        $boss = new Ampli();
+        $boss->setName("Katana 50");
+        $boss->setBrand($this->getReference("Boss"));
+        $this->addReference("boss",$boss);
+        $manager->persist($boss);
 
         $manager->flush();
     }
