@@ -3,6 +3,11 @@
 {% block title %}Hello DefaultController!{% endblock %}
 
 {% block body %}
+    <div class="page-wrapper">
+        <header>
+
+            <img src="../assets/images/logo.svg" alt="logo" class="logo" title="superbe logo n'est-ce pas ?">
+        </header>
     <main>
         <header role="banner">
             <h1>Les Amplificateurs</h1>
@@ -19,13 +24,13 @@
             <button class="search">Rechercher</button>
 
             <div class="typesamplis">
-                <a href="#" class="button">Lancer la recherche</a>
+                <a href="{{ path('product') }}" class="button">Lancer la recherche</a>
             </div>
 
         </header>
 
-        </div>
 
     </main>
+    </div>
 
 {% endblock %}
