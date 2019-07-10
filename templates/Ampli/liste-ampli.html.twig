@@ -1,0 +1,137 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProductController!{% endblock %}
+
+{% block body %}
+      <div class="container">
+            <div class="nav">
+                  <div class="logo"><a href="{{ path('homepage') }}"><img src="images/logo.svg" style="width: 50%;" alt=""></a></div>
+            </div>
+
+            <div class="items">
+
+                  <a href="{{ path('product') }}" class="link-list">
+                        <div class="item prev">
+                        <div class="title-ampli">
+                              <ul class="title-album">
+                                    <li>Nirvana</li>
+                                    <li>Rape Me</li>
+                                    <li>In Utero</li>
+                              </ul>
+                        </div>
+                        <img src="../../RAM-htmlcss/images/nirvana.png">
+                  </div>
+                  </a>
+
+                  <a href="#" class="link-list">
+                        <div class="item prev">
+                              <div class="title-ampli">
+                                    <ul class="title-album">
+                                          <li>Nirvana</li>
+                                          <li>Rape Me</li>
+                                          <li>In Utero</li>
+                                    </ul>
+                              </div>
+                              <img src="../../RAM-htmlcss/images/nirvana.png">
+                        </div>
+                  </a>
+
+                  <a href="#" class="link-list">
+                        <div class="item active">
+                              <div class="title-ampli">
+                                    <ul class="title-album">
+                                          <li>Nirvana</li>
+                                          <li>Rape Me</li>
+                                          <li>In Utero</li>
+                                    </ul>
+                              </div>
+                              <img src="../../RAM-htmlcss/images/nirvana.png">
+                        </div>
+                  </a>
+
+                  <a href="#" class="link-list">
+                        <div class="item">
+                              <div class="title-ampli">
+                                    <ul class="title-album">
+                                          <li>Nirvana</li>
+                                          <li>Rape Me</li>
+                                          <li>In Utero</li>
+                                    </ul>
+                              </div>
+                              <img src="../../RAM-htmlcss/images/nirvana.png">
+                        </div>
+                  </a>
+
+                  <a href="#" class="link-list">
+                        <div class="item next">
+                              <div class="title-ampli">
+                                    <ul class="title-album">
+                                          <li>Nirvana</li>
+                                          <li>Rape Me</li>
+                                          <li>In Utero</li>
+                                    </ul>
+                              </div>
+                              <img src="../../RAM-htmlcss/images/nirvana.png">
+                        </div>
+                  </a>
+
+
+
+
+                  <div class="button-container">
+                        <div class="button"><i class="fas fa-angle-left"></i></div>
+                        <div class="button"><i class="fas fa-angle-right"></i></div>
+                  </div>
+            </div>
+
+      </div>
+
+</body>
+
+<script>
+      // I will be creating a different pen with touch support but right // now I have no time for it due to school
+
+      const slider = document.querySelector(".items");
+      const slides = document.querySelectorAll(".item");
+      const button = document.querySelectorAll(".button");
+
+      let current = 0;
+      let prev = 1;
+      let next = 1;
+
+      for (let i = 0; i < button.length; i++) {
+            button[i].addEventListener("click", () => i == 0 ? gotoPrev() : gotoNext());
+      }
+
+      const gotoPrev = () => current > 0 ? gotoNum(current - 1) : gotoNum(slides.length - 1);
+
+      const gotoNext = () => current < 3 ? gotoNum(current + 1) : gotoNum(0);
+
+      const gotoNum = number => {
+            current = number;
+            prev = current - 1;
+            next = current + 1;
+
+            for (let i = 0; i < slides.length; i++) {
+                  slides[i].classList.remove("active");
+                  slides[i].classList.remove("prev");
+                  slides[i].classList.remove("next");
+            }
+
+            if (next == 3) {
+                  next = 0;
+            }
+
+            if (prev == -1) {
+                  prev = 4;
+            }
+
+            slides[current].classList.add("active");
+            slides[prev].classList.add("prev");
+            slides[next].classList.add("next");
+      }
+</script>
+
+</html>
+      </html>
+{% endblock %}
