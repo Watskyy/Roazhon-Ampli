@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 525.3 210.9" style="enable-background:new 0 0 525.3 210.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{fill:#FFFFFF;}
+	.st2{font-family:'Poppins-ExtraLight';}
+	.st3{font-size:65px;}
+	.st4{fill:#AF853A;}
+	.st5{font-family:'Poppins-Bold';}
+	.st6{font-size:82px;}
+	.st7{fill:#8C8C8C;}
+	.st8{fill:#3F3F3F;}
+</style>
+<g id="Calque_2" class="st0">
+	
+		<image style="display:inline;overflow:visible;" width="1200" height="909" xlink:href="marshall-exemple.png"  transform="matrix(0.5275 0 0 0.5275 110.6843 329.0676)">
+	</image>
+</g>
+<g id="Calque_1">
+	<g>
+		<text transform="matrix(1 0 0 1 8.3232 73.272)"><tspan x="0" y="0" class="st1 st2 st3">Roazhon </tspan><tspan x="289.9" y="0" class="st4 st5 st3">Ampli</tspan></text>
+		<text transform="matrix(1 0 0 1 190.0775 160.022)" class="st1 st2 st6">Master</text>
+		<path class="st7" d="M191,95.6v69.2c0,3.3-2.7,5.9-5.9,5.9H83.2c-3.3,0-5.9-2.7-5.9-5.9V95.6c0-2.2,1.2-4.1,3-5.2
+			c0.9-0.5,1.9-0.8,2.9-0.8h101.9c1.1,0,2.1,0.3,2.9,0.8C189.8,91.5,191,93.5,191,95.6z"/>
+		<path class="st8" d="M188.1,90.5c-0.9-0.5-1.9-0.8-2.9-0.8H83.2c-1.1,0-2.1,0.3-2.9,0.8c1-2,3-3.4,5.3-3.4h97.1
+			C185.1,87.1,187.1,88.5,188.1,90.5z"/>
+		<rect x="84.1" y="92.5" class="st4" width="101" height="13.5"/>
+		<rect x="84.1" y="106" class="st8" width="101" height="58.6"/>
+		<circle class="st8" cx="99.8" cy="100" r="3.6"/>
+		<circle class="st8" cx="114.2" cy="100" r="3.6"/>
+		<circle class="st8" cx="130.1" cy="100" r="3.6"/>
+	</g>
+</g>
+</svg>
