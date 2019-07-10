@@ -10,7 +10,10 @@ html, body {
     text-rendering: optimizeLegibility;
     font-size: 100%;
     line-height: 26px;
+
+
 }
+
 .titre {
     text-align: center;
     color: #ffffff;
@@ -31,7 +34,7 @@ header {
 }
 
 .page-wrapper {
-    background: url("../../assets/img/bg.png");
+    background: url("../images/bg.png");
     background-repeat: no-repeat;
     position: relative;
     height: 100vh;

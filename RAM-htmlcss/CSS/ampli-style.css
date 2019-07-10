@@ -1,0 +1,91 @@
+html, body {
+    font-family: "ff-meta-web-pro", sans-serif;
+
+
+    text-rendering: optimizeLegibility;
+    font-size: 100%;
+    line-height: 26px;
+    background: #cecece;
+    background-size: 60%;
+    color: black;
+}
+
+.titre {
+    text-align: center;
+    color: black;
+    padding: 15px 36px;
+    background-color: slategrey;
+}
+
+.titre img {
+    width: 20%;
+    height: 20%;
+}
+
+.titre p {
+    font-size: 15px;
+}
+
+.intro header {
+    position: relative;
+    background: #d8d8d8;
+    overflow: hidden;
+    width: 40%;
+    height: 30em;
+    float: left;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.typesamplis {
+    color: #af853a;
+    text-align: center;
+}
+
+
+
+.button {
+    width: 90%;
+    padding: 15px 32px;
+    
+    background: url(../images/marshall-exemple.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #af853a;
+    text-decoration: none;
+    border: none;
+    color: white;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    margin-top: 5%;
+    cursor: pointer;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+    color: #af853a;
+    background-color: #fff;
+}
+
+
+.resultats-recherche {
+    margin-left: 10%;
+    display: inline-block;
+}
+
+.recommandations img {
+    width: 20%;
+    height: 20%;
+    margin-top: 4%;
+}
+
+
+footer {
+    background-color: slategray;
+    text-align: center;
+}

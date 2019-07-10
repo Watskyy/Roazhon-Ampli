@@ -30,7 +30,142 @@ html, body {
       height: 100vh;
       margin: 0;
       padding: 0;
+      background: url("../images/back_1.png");
+      background-size: cover;
+
 }
+
+
+
+
+body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+}
+
+.items {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      user-select: none;
+}
+
+.items .item {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      overflow: hidden;
+      transition: all 300ms ease-in-out;
+      z-index: -1;
+      opacity: 0;
+}
+
+.item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+}
+
+.item.active {
+      opacity: 1;
+      z-index: 99;
+      box-shadow: 0px 0px 105px -35px rgba(0, 0, 0, 0.75);
+}
+
+.title-ampli {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      width:100%;
+      font-family: Poppins;
+      color: black;
+}
+
+a.link-list {
+      cursor: pointer;
+}
+
+.title-album {
+
+      margin: 0;
+      text-align: center;
+      padding: 60px;
+      width: 100%;
+      height: 100vh;
+
+
+      list-style: none;
+      font-size: 30px;
+      background-color: rgba(228, 233, 237, 0.8);
+
+}
+
+
+.item.prev {
+      z-index: 2;
+      opacity: 0.25;
+      transform: translate(-125%, -50%);
+}
+
+.item.next {
+      z-index: 2;
+      opacity: 0.25;
+      transform: translate(25%, -50%);
+}
+
+.items .button-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 275px;
+      z-index: 100;
+}
+
+.button-container .button {
+      color: #fff;
+      font-size: 32px;
+      cursor: pointer;
+      position: relative;
+      opacity: 0.75;
+      transition: all 300ms ease-in-out;
+}
+
+.button-container .button:hover {
+      opacity: 1;
+}
+
+.button-container .button:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      background-color: rgba(0, 0, 0, 1);
+      border-radius: 50%;
+      z-index: -99;
+}
+
+.button-container .button:nth-child(1) {
+      float: left;
+}
+
+.button-container .button:nth-child(2) {
+      float: right;
+}
+
+
+
+
 
 .left, .right {
       position: absolute;
@@ -47,17 +182,19 @@ html, body {
       background: #e0e0e0;
 }
 
-.nav {
-      position: fixed;
+header {
       width: 100%;
-      height: 100px;
+      display: flex;
 }
 
-.logo, .next {
-      line-height: 80px;
-      position: absolute;
-      padding: 10px;
+.logo {
+      width: 30%;
+      margin: 0 auto;
 }
+
+
+
+
 
 .watch, .cart {
       line-height: 80px;
@@ -68,7 +205,6 @@ html, body {
 
 .logo {
       padding: 10px 80px 10px 60px;
-      background: #e0e0e0;
 }
 
 .next {
