@@ -3,17 +3,29 @@
 {% block title %}Hello DefaultController!{% endblock %}
 
 {% block body %}
+    <main>
+        <header role="banner">
+            <h1>Les Amplificateurs</h1>
+            <h2>Sélectionnez votre type d'amplicateur ici</h2>
 
-    <form action="">
-        <input type="text" placeholder="Titre musique">
-        <select name="" id="">
-            {% for ampli in amplis %}
-                <option value="{{ ampli.id }}">
-                    {{ ampli.fullname }}
-                </option>
-            {% endfor %}
-        </select>
-        <button type="submit">Rechercher</button>
-    </form>
+            <label for="site-search">Trouver la musique :</label>
+            <input type="search" id="site-search" name="q"
+                   aria-label="Search through site content">
+            <button>Rechercher</button>
+
+            <label for="site-search">Trouver votre ampli :</label>
+            <input type="search" id="site-search" name="q"
+                   aria-label="Search through site content">
+            <button class="search">Rechercher</button>
+
+            <div class="typesamplis">
+                <a href="#" class="button">Lancer la recherche</a>
+            </div>
+
+        </header>
+
+        </div>
+
+    </main>
 
 {% endblock %}
