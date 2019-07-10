@@ -1,67 +1,200 @@
-<!doctype html>
-   
 
-<html lang="fr">
-    
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
-    <title>Roazhon Ampli Master</title>
-    
-    <meta name="description" content="Le site numéro 1 pour vos amplis">
-    
-    <link rel="stylesheet" href="css/ampli-style.css">
-    
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Product Page Concept</title>
+      <link rel="stylesheet" href="css/style.css">
+      <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 </head>
-    
 <body>
-    
-    <header class="titre">
-        <img src="images/logo.png" alt="logo" title="superbe logo n'est-ce pas ?">
-        <p><strong>Gestion de vos amplificateurs</strong></p>
-    </header>
-    
-    <main>
-        
-        
 
-        <div class="page-wrapper">
+      <div class="container">
+            <div class="left"></div>
+            <div class="right"></div>
 
-	<section class="intro" id="zen-intro">
-		<header role="banner">
-			<h1>Les Amplificateurs</h1>
-			<h2>Sélectionnez votre type d'amplicateur ici</h2>
-            
-            <label for="site-search">Trouver la musique :</label>
-        <input type="search" id="site-search" name="q"
-            aria-label="Search through site content">
-            <button>Rechercher</button>
-            <br>
-            <label for="site-search">Trouver votre ampli :</label>
-        <input type="search" id="site-search" name="q"
-            aria-label="Search through site content">
-            <button>Rechercher</button>
-            
-            <div class="typesamplis">
-                <a href="#" class="button">Lancer la recherche</a>
+            <div class="nav">
+                  <div class="logo"><img src="images/logo.svg" alt=""></div>
+
+                  <div class="next"><i class="fa fa-angle-right"></i></div>
+
+    
+
+                 
             </div>
 
-        
 
-        
 
-    </section>
-            
-        </div>
-        
-    </main>
-    
+            <div class="left-bottom">
+                  <p>FENDER '65 DELUXE REVERB</p>
 
-    
+            </div>
+
+            <div class="left-sidebar">
+
+
+                  <h1 class="product-title">FENDER '65 DELUXE REVERB</h1>
+
+
+                  <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati culpa veniam enim quam, sunt officiis, maiores quod esse molestias a!</p>
+                  <ul style="display: flex;flex-direction: row; list-style: none;">
+                        <li>
+                              <p>BASS</p>
+                              <img src="images/setting-ampli.svg" style="width: 100%" alt="">
+                              <p></p>
+                        </li>
+
+                        <li>
+                              <p>TREBLE</p>
+                              <img src="images/setting-ampli.svg"style="width: 100%" alt="">
+                              <p></p>
+                        </li>
+
+                        <li>
+                              <p>MIDDLE</p>
+                              <img src="images/setting-ampli.svg" style="width: 100%"alt="">
+                              <p></p>
+                        </li>
+
+                        <li>
+                              <p>GAIN</p>
+                              <img src="images/setting-ampli.svg"style="width: 100%" alt="">
+                              <p></p>
+                        </li>
+
+                        <li>
+                              <p>REVERB</p>
+                              <img src="images/setting-ampli.svg"style="width: 100%" alt="">
+                              <p></p>
+                        </li>
+
+
+                  </ul>
+                  <button class="btn">Voir plus</button>
+
+            </div>
+
+            <div class="product" id="product">
+                  <img src="images/ampli.png" alt="drone">
+            </div>
+
+            <div class="media">
+                  <ul>
+                        <li><i class="fa fa-facebook"></i></li>
+                        <li><i class="fa fa-instagram"></i></li>
+                        <li><i class="fa fa-twitter"></i></li>
+                  </ul>
+            </div>
+
+      </div>
+
+      <script type="text/javascript">
+
+      TweenMax.from(".right", 1.6, {
+           delay: 0.6,
+           // opacity: 0,
+           // x: -20,
+           width: 0,
+           ease: Expo.easeInOut
+     });
+
+      TweenMax.from(".logo", 1, {
+            delay: 1,
+            opacity: 0,
+            x: -20,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.from(".next", 1, {
+            delay: 1.2,
+            opacity: 0,
+            x: -20,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.from(".watch", 1, {
+            delay: 1.4,
+            opacity: 0,
+            x: -20,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.from(".cart", 1, {
+            delay: 1.6,
+            opacity: 0,
+            x: -20,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.from(".product-title", 2, {
+            delay: 1.6,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.from(".desc", 2, {
+            delay: 1.8,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.from("#price", 2, {
+            delay: 2,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.from(".btn", 2, {
+            delay: 2.2,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.staggerFrom(".right-sidebar ul li", 1, {
+            delay: 2.6,
+            opacity: 0,
+            y: 20,
+            ease: Power3.easeInOut
+      }, 0.08);
+
+      TweenMax.from(".left-bottom", 2, {
+            delay: 2.8,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.staggerFrom(".media ul li", 1, {
+            delay: 3.6,
+            opacity: 0,
+            y: 20,
+            ease: Power3.easeInOut
+      }, 0.08);
+
+      TweenMax.from(".product img", 3, {
+            delay: 2,
+            // opacity: 0,
+            // y: 20,
+            scale: 0,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.to(".product img", 3, {
+            delay: 2,
+            // opacity: 0,
+            // y: 20,
+            scale: 1,
+            ease: Expo.easeInOut
+      });
+
+      </script>
 </body>
-    
-    
-    
-    
 </html>
