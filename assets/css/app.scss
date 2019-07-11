@@ -31,15 +31,26 @@ header {
     width: 30%;
     background-color: #101010;
 }
+
+.logo-list {
+    width: 30%;
+
+}
+
+
 .logo a{
     display: flex;
     justify-content: center;
 }
+
+
+
+
 .titre p {
     font-size: 30px;
 }
 .page-wrapper {
-    background: url("../../public/images/bg1.png");
+    background: url("/images/bg1.png");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -127,6 +138,9 @@ button {
     background-color: #fff;
 }
 .container {
+    background: url("/images/bg1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
     margin: 0;

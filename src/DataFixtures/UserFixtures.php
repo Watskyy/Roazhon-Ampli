@@ -24,6 +24,7 @@ class UserFixtures extends Fixture
         $admin->setRoles(["ROLE_ADMIN"]);
         $password = $this->encoder->encodePassword($admin, '1234');
         $admin->setPassword($password);
+        $this->setReference("user-admin", $admin);
 
         $manager->persist($admin);
 
@@ -31,6 +32,7 @@ class UserFixtures extends Fixture
         $johndoe->setEmail("johndoe@gmail.com");
         $password = $this->encoder->encodePassword($johndoe, '1234');
         $johndoe->setPassword($password);
+        $this->setReference("user-johndoe", $johndoe);
 
         $manager->persist($johndoe);
 

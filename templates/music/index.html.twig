@@ -1,45 +1,79 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Music index{% endblock %}
+{% block title %}Hello ProductController!{% endblock %}
 
 {% block body %}
-    <h1>Music index</h1>
+    <div class="container">
+        <div class="header-logo">
+            <img src="{{ asset('images/logo.svg') }}" alt="logo" title="superbe logo n'est-ce pas ?">
+        </div>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Title</th>
-                <th>Treble</th>
-                <th>Bass</th>
-                <th>Middle</th>
-                <th>Gain</th>
-                <th>Reverb</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for music in musics %}
-            <tr>
-                <td>{{ music.id }}</td>
-                <td>{{ music.title }}</td>
-                <td>{{ music.treble }}</td>
-                <td>{{ music.bass }}</td>
-                <td>{{ music.middle }}</td>
-                <td>{{ music.gain }}</td>
-                <td>{{ music.reverb }}</td>
-                <td>
-                    <a href="{{ path('music_show', {'id': music.id}) }}">show</a>
-                    <a href="{{ path('music_edit', {'id': music.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="8">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+        <div class="items">
 
-    <a href="{{ path('music_new') }}">Create new</a>
+            {% for music in musics %}
+                <a href="{{ path('music_show', {'id': music.id}) }}" class="link-list">
+                    <div class="item prev">
+                        <div class="title-ampli">
+                            <ul class="title-album">
+                                <li>{{ music.artist.name }}</li>
+                                <li>{{ music.title }}</li>
+                            </ul>
+                        </div>
+                        <img src="{{ asset('images/nirvana.png') }}">
+                    </div>
+                </a>
+            {% endfor %}
+
+            <div class="button-container">
+                <div class="button"><i class="fas fa-angle-left"></i></div>
+                <div class="button"><i class="fas fa-angle-right"></i></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // I will be creating a different pen with touch support but right // now I have no time for it due to school
+
+        const slider = document.querySelector(".items");
+        const slides = document.querySelectorAll(".item");
+        const button = document.querySelectorAll(".button");
+
+        let current = 0;
+        let prev = 1;
+        let next = 1;
+
+        for (let i = 0; i < button.length; i++) {
+            button[i].addEventListener("click", () => i == 0 ? gotoPrev() : gotoNext());
+        }
+
+        const gotoPrev = () => current > 0 ? gotoNum(current - 1) : gotoNum(slides.length - 1);
+
+        const gotoNext = () => current < 3 ? gotoNum(current + 1) : gotoNum(0);
+
+        const gotoNum = number => {
+            current = number;
+            prev = current - 1;
+            next = current + 1;
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+                slides[i].classList.remove("prev");
+                slides[i].classList.remove("next");
+            }
+
+            if (next == 3) {
+                next = 0;
+            }
+
+            if (prev == -1) {
+                prev = 4;
+            }
+
+            slides[current].classList.add("active");
+            slides[prev].classList.add("prev");
+            slides[next].classList.add("next");
+        }
+    </script>
+
 {% endblock %}

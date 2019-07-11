@@ -45,7 +45,7 @@ class MusicFixtures extends Fixture implements DependentFixtureInterface
         $peoplegetready ->setBass(2);
         $peoplegetready ->setTreble(2.3);
         $peoplegetready ->setBass(3.8);
-        $peoplegetready ->setArtist($this->getReference("Jeff Beck"));
+        $peoplegetready ->setArtist($this->getReference("jeffbeck"));
         $this->addReference("peoplegetready", $peoplegetready);
         $manager->persist($peoplegetready);
 

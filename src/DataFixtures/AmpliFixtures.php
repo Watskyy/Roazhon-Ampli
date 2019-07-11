@@ -14,7 +14,7 @@ class AmpliFixtures extends Fixture implements DependentFixtureInterface
         $rumble500 = new Ampli();
         $rumble500->setName("Rumble 500");
         $rumble500->setBrand($this->getReference("Fender"));
-        $this->addReference("Rumble500",$rumble500);
+        $this->addReference("rumble500",$rumble500);
         $manager->persist($rumble500);
 
         $ac30vr = new Ampli();

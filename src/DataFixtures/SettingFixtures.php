@@ -19,39 +19,39 @@ class SettingFixtures extends Fixture implements DependentFixtureInterface
         $manager->persist($fender1);
 
         $fender2 = new Setting();
-        $fender2->setName("Modern Heavy");
+        $fender2->setProperty("Modern Heavy");
         $fender2->setValue(8.5);
         $fender2->setAmpli($this->getReference("rumble500"));
         $fender2->setMusic($this->getReference("rapeme"));
         $manager->persist($fender2);
 
         $vox = new Setting();
-        $vox->setName("Smooth Lead");
+        $vox->setProperty("Smooth Lead");
         $vox->setValue(2);
         $vox->setAmpli($this->getReference("ac30vr"));
         $vox->setMusic($this->getReference("foxeylady"));
-        $manager->persist(vox);
+        $manager->persist($vox);
 
         $marshall1 = new Setting();
-        $marshall1->setName("Super Clean");
+        $marshall1->setProperty("Super Clean");
         $marshall1->setValue(9);
         $marshall1->setAmpli($this->getReference("code25"));
         $marshall1->setMusic($this->getReference("starwaytoheaven"));
         $manager->persist($marshall1);
 
         $marshall2 = new Setting();
-        $marshall2->setName("Modern Heavy");
+        $marshall2->setProperty("Modern Heavy");
         $marshall2->setValue(10.5);
         $marshall2->setAmpli($this->getReference("code25"));
         $marshall2->setMusic($this->getReference("starwaytoheaven"));
         $manager->persist($marshall2);
 
         $boss = new Setting();
-        $boss->setName("Smooth Lead");
+        $boss->setProperty("Smooth Lead");
         $boss->setValue(2.5);
         $boss->setAmpli($this->getReference("katana50"));
         $boss->setMusic($this->getReference("peoplegetready"));
-        $boss->persist($boss);
+        $manager->persist($boss);
 
 
 
