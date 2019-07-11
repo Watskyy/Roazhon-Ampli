@@ -9,11 +9,15 @@
         <div class="right"></div>
 
         <div class="nav">
-            <div class="logo"><a href="{{ path('homepage') }}"><img src="images/logo.svg" style="width: 50%;" alt=""></a></div>
+            <div class="logo"><a href="{{ path('homepage') }}"><img src="{{ asset('images/logo.svg') }}" style="width: 50%;" alt=""></a></div>
         </div>
         <div class="left-bottom">
-            <p>FENDER '65 DELUXE REVERB</p>
-
+            <H3>Settings supplémentaires :</H3>
+            {% for setting in music.settings %}
+                <p>{{ setting.ampli.name }}</p>
+                <p>{{ setting.property }} -> {{ setting.value }}</p>
+            {% endfor %}
+        <a href="{{ path('music_index') }}" class="button">Retour à la liste des musiques</a>
         </div>
 
         <div class="left-sidebar">
@@ -22,46 +26,40 @@
             <h1 class="product-title">{{ music.title }}</h1>
 
 
-            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati culpa veniam enim quam, sunt officiis, maiores quod esse molestias a!</p>
+            <p class="desc">{{ music.artist.name }}</p>
             <ul style="display: flex;flex-direction: row; list-style: none;padding: 0;">
                 <li class="setting">
                     <p>BASS</p>
-                    <img src="images/setting-ampli.svg" style="width: 100%" alt="">
-                    <p>2.7</p>
+                    <img src="{{ asset('images/setting-ampli.svg') }}" style="width: 100%" alt="">
+                    <p>{{ music.bass }}</p>
                 </li>
 
                 <li class="setting">
                     <p>TREBLE</p>
-                    <img src="images/setting-ampli.svg"style="width: 100%" alt="">
-                    <p>8.3</p>
+                    <img src="{{ asset('images/setting-ampli.svg') }}"style="width: 100%" alt="">
+                    <p>{{ music.treble }}</p>
                 </li>
 
                 <li class="setting">
                     <p>MIDDLE</p>
-                    <img src="images/setting-ampli.svg" style="width: 100%"alt="">
-                    <p>9</p>
+                    <img src="{{ asset('images/setting-ampli.svg') }}" style="width: 100%"alt="">
+                    <p>{{ music.middle }}</p>
                 </li>
 
                 <li class="setting">
                     <p>GAIN</p>
-                    <img src="images/setting-ampli.svg"style="width: 100%" alt="">
-                    <p>10.5</p>
+                    <img src="{{ asset('images/setting-ampli.svg') }}"style="width: 100%" alt="">
+                    <p>{{ music.gain }}</p>
                 </li>
 
                 <li class="setting">
                     <p>REVERB</p>
-                    <img src="images/setting-ampli.svg"style="width: 100%" alt="">
-                    <p>12</p>
+                    <img src="{{ asset('images/setting-ampli.svg') }}"style="width: 100%" alt="">
+                    <p>{{ music.reverb }}</p>
                 </li>
 
 
             </ul>
-
-            {% for setting in music.settings %}
-                {{ setting.ampli.name }}
-                {{ setting.property }} -> {{ setting.value }}
-            {% endfor %}
-
         </div>
 
         <div class="product" id="product">

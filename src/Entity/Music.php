@@ -22,7 +22,7 @@ class Music
      * @ORM\Column(type="string", length=255)
      */
     private $title;
-
+    /**
     /**
      * @ORM\Column(type="decimal", precision=2, scale=1)
      */
@@ -98,7 +98,6 @@ class Music
 
         return $this;
     }
-
     public function getTreble()
     {
         return $this->treble;

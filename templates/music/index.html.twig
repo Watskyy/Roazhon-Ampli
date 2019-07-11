@@ -5,31 +5,22 @@
 {% block body %}
     <div class="container">
         <div class="header-logo">
-            <img src="{{ asset('images/logo.svg') }}" alt="logo" title="superbe logo n'est-ce pas ?">
+           <a href="{{ path('homepage') }}"><img src="{{ asset('images/logo.svg') }}" alt="logo" title="superbe logo n'est-ce pas ?"></a>
         </div>
-
-        <div class="items">
-
+        <div class="gallerie">
             {% for music in musics %}
-                <a href="{{ path('music_show', {'id': music.id}) }}" class="link-list">
-                    <div class="item prev">
-                        <div class="title-ampli">
-                            <ul class="title-album">
-                                <li>{{ music.artist.name }}</li>
-                                <li>{{ music.title }}</li>
-                            </ul>
+                <div class="img-gallerie">
+                    <div class="hovereffect">
+                        <img class="img-responsive" src="{{ asset('images/nirvana.png') }}" alt="">
+                        <div class="overlay">
+                            <h2>{{ music.title }}</h2>
+                            <p>
+                                <a href="{{ path('music_show', {'id': music.id}) }}">{{ music.artist.name }}</a>
+                            </p>
                         </div>
-                        <img src="{{ asset('images/nirvana.png') }}">
                     </div>
-                </a>
+                </div>
             {% endfor %}
-
-            <div class="button-container">
-                <div class="button"><i class="fas fa-angle-left"></i></div>
-                <div class="button"><i class="fas fa-angle-right"></i></div>
-            </div>
-        </div>
-
     </div>
 
     <script>
